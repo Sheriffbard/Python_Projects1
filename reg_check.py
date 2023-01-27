@@ -4,9 +4,10 @@ register = {'Michael':'yes','John': 'no',
 
 def register_check(reg):
     count = 0
-    for i in reg:
-        if i.values() == 'yes':
+    for i,v in reg.items():
+        print(i,v)
+        if v == 'yes':
             count += 1
-    return count
+    return 'The number of student present is', count
 
 print(register_check(register))
