@@ -14,20 +14,15 @@ The function should return the price after the discount.
 
 def my_discount():
 
-    cp = input("Enter your price: ")  #cp = customer price
+    cp = float(input("Enter your price: ")) 
+    #cp = customer price
 
-    dp = input("Enter your discount percentage: ")
+    dp = float(input("Enter your discount percentage: (Note: Your percentage should be an integer 1, 20, 15 etc "))
 
-    if type(dp) == float: #dp = discount percent
+    pp = dp / 100
+    pad = cp * (1 - pp)
 
-        pad = (cp - (1 - dp)) #pad = price after discount
-        print(pad)
-    elif type(dp) == int:
-        con_dp = (dp / 100)
-        pad = (cp - (1 - dp))
-        print(pad)
+    return pad
 
-    else:
-        print("Error input, check your percentage format, e.g 25% or 0.25")
 
 print(my_discount())
