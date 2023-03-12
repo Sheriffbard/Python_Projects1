@@ -16,6 +16,8 @@ def only_float (a, b):
         return 2
     if type(a) or type(b) == float:
         return 1
+    if type(a) and type(b) != float:
+        return 0
 
 print(only_float(12.1, 23))
 print(only_float(12.3, 23.1))

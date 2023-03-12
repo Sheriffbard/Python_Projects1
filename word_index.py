@@ -10,11 +10,8 @@ length), the function should return zero (0)"""
 
 def word_index (list1):
     for word in list1:
-    
-        for words in range(len(list1) - 1):
-    
         
-            if len(list1[words]) == len(list1[words+ 1]):
+            if len(list1[word]) == len(list1[word + 1]):
            
                 return 0
             elif len(word) == len(max(list1)):
